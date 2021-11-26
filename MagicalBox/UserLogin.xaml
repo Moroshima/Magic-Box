@@ -1,0 +1,16 @@
+﻿<Window x:Class="MagicalBox.UserLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MagicalBox"
+        mc:Ignorable="d"
+        Title="UserLogin" Height="200" Width="400">
+    <Grid Margin="0,0,0,0">
+        <TextBox Name="boxNumber" HorizontalAlignment="Left" Margin="160,37,0,0" VerticalAlignment="Top" Width="160"/>
+        <TextBox Name="idCardNumber" HorizontalAlignment="Left" Margin="160,70,0,0" VerticalAlignment="Top" Width="160"/>
+        <Label Content="盒子编号" HorizontalAlignment="Left" Margin="66,36,0,0" VerticalAlignment="Top"/>
+        <Label Content="身份证号" HorizontalAlignment="Left" Margin="66,66,0,0" VerticalAlignment="Top"/>
+        <Button Content="登录" Click="Button_Click" HorizontalAlignment="Left" Margin="95,107,0,0" VerticalAlignment="Top" Height="23" Width="79"/>
+    </Grid>
+</Window>
