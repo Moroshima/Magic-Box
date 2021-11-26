@@ -29,23 +29,23 @@ namespace MagicalBox
             string box = boxNumber.Text;    //获取密码
             string boxNumberFromDb = null;
             using AppDbContext dbContext = new AppDbContext();
-            if (idCard != null && box != null)
-                foreach (var item in dbContext.Users.Where(m => m.IdCard == $"{idCard}"))
-                {
-                    boxNumberFromDb = item.id;
-                    //MessageBox.Show(item.Password);
-                }
-            else MessageBox.Show("请完整填写账号与密码！");
-            //判断用户名密码是否正确
-            if ($"{passwordFromDb}".Equals(password))
-            {
-                MessageBox.Show("登录成功！");
-                //new MainWindow().Show();
-            }
-            else
-            {
-                MessageBox.Show("登录失败！");
-            }
+            //if (idCard != null && box != null)
+            //    foreach (var item in dbContext.Users.Where(m => m.IdCard == $"{idCard}"))
+            //    {
+            //        boxNumberFromDb = item.id;
+            //        //MessageBox.Show(item.Password);
+            //    }
+            //else MessageBox.Show("请完整填写账号与密码！");
+            ////判断用户名密码是否正确
+            //if ($"{passwordFromDb}".Equals(password))
+            //{
+            //    MessageBox.Show("登录成功！");
+            //    //new MainWindow().Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("登录失败！");
+            //}
         }
     }
 }
