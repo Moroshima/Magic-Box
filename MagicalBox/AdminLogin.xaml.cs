@@ -32,6 +32,7 @@ namespace MagicalBox
             if ($"{passwordFromDb}".Equals(password))
             {
                 MessageBox.Show("登录成功！");
+                new AdminPage().Show();
             }
             else
             {

@@ -1,0 +1,31 @@
+﻿<Window x:Class="MagicalBox.AdminPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MagicalBox"
+        mc:Ignorable="d"
+        Title="AdminPage" Height="627" Width="987">
+    <Grid Margin="0,0,10,-5">
+        <ListView x:Name="dataList"  ItemsSource="{Binding}" Margin="113,131,113,40" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="姓名" DisplayMemberBinding="{Binding Username}"/>
+                    <GridViewColumn Header="有效证件" DisplayMemberBinding="{Binding IdCard}"/>
+                    <GridViewColumn Header="登机牌编号" DisplayMemberBinding="{Binding BoardCard}"/>
+                    <GridViewColumn Header="出发地" DisplayMemberBinding="{Binding Departure}"/>
+                    <GridViewColumn Header="目的地" DisplayMemberBinding="{Binding Destination}"/>
+                    <GridViewColumn Header="手机机型" DisplayMemberBinding="{Binding PhoneType}"/>
+                    <GridViewColumn Header="手机号码" DisplayMemberBinding="{Binding PhoneNumber}"/>
+                    <GridViewColumn Header="满意度" DisplayMemberBinding="{Binding Satisfaction}"/>
+                    <GridViewColumn Header="备用联系方式" DisplayMemberBinding="{Binding BackupLink}"/>
+                    <GridViewColumn Header="盒子编号" DisplayMemberBinding="{Binding BoxId}"/>
+                    <GridViewColumn Header="是否已取回手机" DisplayMemberBinding="{Binding Returned}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="刷新列表" Name="refreshList" Click="refreshList_Click" HorizontalAlignment="Left" Margin="624,65,0,0" VerticalAlignment="Top"/>
+        <Button Content="添加信息" Name="addInfo" Click="addInfo_Click" HorizontalAlignment="Left" Margin="710,65,0,0" VerticalAlignment="Top"/>
+        <Button Content="删除信息" Name="deleteInfo" HorizontalAlignment="Left" Margin="792,65,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

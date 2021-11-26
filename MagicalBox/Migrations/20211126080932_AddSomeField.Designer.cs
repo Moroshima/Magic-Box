@@ -2,6 +2,7 @@
 using MagicalBox.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MagicalBox.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211126080932_AddSomeField")]
+    partial class AddSomeField
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.0");
@@ -41,19 +43,11 @@ namespace MagicalBox.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("BackupLink")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("BoardCard")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("BoxId")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Comment")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -66,14 +60,6 @@ namespace MagicalBox.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("IdCard")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("PhoneType")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
