@@ -11,6 +11,7 @@
         <TextBox Name="idCardNumber" HorizontalAlignment="Left" Margin="160,70,0,0" VerticalAlignment="Top" Width="160"/>
         <Label Content="盒子编号" HorizontalAlignment="Left" Margin="66,36,0,0" VerticalAlignment="Top"/>
         <Label Content="身份证号" HorizontalAlignment="Left" Margin="66,66,0,0" VerticalAlignment="Top"/>
-        <Button Content="登录" Click="Button_Click" HorizontalAlignment="Left" Margin="95,107,0,0" VerticalAlignment="Top" Height="23" Width="79"/>
+        <Button Content="登录" Click="User_Button_Click" HorizontalAlignment="Left" Margin="95,107,0,0" VerticalAlignment="Top" Height="23" Width="79"/>
+        <Button Content="管理员登录" Click="Admin_Button_Click" HorizontalAlignment="Left" Margin="230,107,0,0" VerticalAlignment="Top" Height="23" Width="79"/>
     </Grid>
 </Window>

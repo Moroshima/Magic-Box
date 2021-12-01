@@ -33,11 +33,20 @@ namespace MagicalBox
             {
                 MessageBox.Show("登录成功！");
                 new AdminPage().Show();
+                Window window = Window.GetWindow(this);//关闭父窗体
+                window.Close();
             }
             else
             {
                 MessageBox.Show("登录失败！");
             }
+        }
+
+        private void Back_Button_Click(object sender, RoutedEventArgs e)
+        {
+            new UserLogin().Show();
+            Window window = Window.GetWindow(this);//关闭父窗体
+            window.Close();
         }
     }
 }

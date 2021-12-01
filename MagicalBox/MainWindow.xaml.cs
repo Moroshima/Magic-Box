@@ -50,7 +50,6 @@ namespace MagicalBox
             // mainWindow.Show();
             // NavigationWindow window = new NavigationWindow();
             // window.Source = new Uri("MainWindow.xaml", UriKind.Relative);
-
             // window.Show();//无模式，弹出！
         }
         private void ButtonBase_Click(object sender, RoutedEventArgs e)

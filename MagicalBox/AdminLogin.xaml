@@ -5,10 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MagicalBox"
         mc:Ignorable="d"
-        Title="AdminLogin" Height="450" Width="800">
-    <Grid>
-        <TextBox Name="usernameTextBox" HorizontalAlignment="Center" Margin="0,200,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <PasswordBox Name="passwordTextBox" HorizontalAlignment="Center" Margin="0,237,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Content="登录" Click="Button_Click" Margin="266,279,266,105"/>
+        Title="AdminLogin" Height="200" Width="400">
+    <Grid Margin="0,0,0,0">
+        <TextBox Name="usernameTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Margin="141,40,0,0"/>
+        <PasswordBox Name="passwordTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="180" Margin="141,70,0,0"/>
+        <Label Content="管理员账号" HorizontalAlignment="Left" Margin="66,36,0,0" VerticalAlignment="Top"/>
+        <Label Content="管理员密码" HorizontalAlignment="Left" Margin="66,66,0,0" VerticalAlignment="Top"/>
+        <Button Content="登录" Click="Button_Click" HorizontalAlignment="Left" Margin="88,110,0,0" VerticalAlignment="Top" Height="23" Width="79"/>
+        <Button Content="返回" Click="Back_Button_Click" HorizontalAlignment="Left" Margin="226,110,0,0" VerticalAlignment="Top" Height="23" Width="79"/>
     </Grid>
 </Window>

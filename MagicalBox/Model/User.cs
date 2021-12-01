@@ -12,8 +12,8 @@
         public string PhoneType { get; set; }
         public string PhoneNumber { get; set; }
         public string BackupLink { get; set; }
-        public string Comment { get; set; }
-        public bool Returned { get; set; }
+        public string? Comment { get; set; }
+        public bool? Returned { get; set; }
         public Satisfaction? Satisfaction { get; set; }
         public User()
         {

@@ -23,7 +23,7 @@ namespace MagicalBox
             dbContext.SaveChanges();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void User_Button_Click(object sender, RoutedEventArgs e)
         {
             string idCard = idCardNumber.Text;    //获取用户名
             string box = boxNumber.Text;    //获取密码
@@ -40,12 +40,19 @@ namespace MagicalBox
             //if ($"{passwordFromDb}".Equals(password))
             //{
             //    MessageBox.Show("登录成功！");
-            new AdminLogin().Show();
+            // new AdminLogin().Show();
             //}
             //else
             //{
             //    MessageBox.Show("登录失败！");
             //}
+        }
+
+        private void Admin_Button_Click(object sender, RoutedEventArgs e)
+        {
+            new AdminLogin().Show();
+            Window window = Window.GetWindow(this);//关闭父窗体
+            window.Close();
         }
     }
 }
