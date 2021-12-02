@@ -48,5 +48,12 @@ namespace MagicalBox
             Window window = Window.GetWindow(this);//关闭父窗体
             window.Close();
         }
+
+        private void Reg_Button_Click(object sender, RoutedEventArgs e)
+        {
+            new AdminRegist().Show();
+            Window window = Window.GetWindow(this);//关闭父窗体
+            window.Close();
+        }
     }
 }

@@ -33,11 +33,11 @@ namespace MagicalBox
             new AdminLogin().Show();
             //MessageBox.Show("Hello");
             using AppDbContext dbContext = new AppDbContext();
-            var data = new Admin
-            {
-                Username = "11111",
-                Password = "22222"
-            };
+            //var data = new Admin
+            //{
+            //    Username = "11111",
+            //    Password = "22222"
+            //};
             //var item = dbContext.Admins.Where(m => m.Username == "11111");
             //MessageBox.Show(item.Password);
             //MessageBox.Show($"{findpassword}");
