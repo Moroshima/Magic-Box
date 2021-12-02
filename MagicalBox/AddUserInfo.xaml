@@ -5,27 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MagicalBox"
         mc:Ignorable="d"
-        Title="AddUserInfo" Height="310" Width="300">
+        Title="AddUserInfo" Height="330" Width="360">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="60,26,0,0" TextWrapping="Wrap" Text="盒子编号" VerticalAlignment="Top"/>
-        <TextBox Name="Add_User_BoxId"  HorizontalAlignment="Left" Margin="122,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="Add_User_BoxId"  HorizontalAlignment="Left" Margin="122,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
         <TextBlock HorizontalAlignment="Left" Margin="60,48,0,0" TextWrapping="Wrap" Text="乘客姓名" VerticalAlignment="Top"/>
-        <TextBox Name="Add_User_Username" HorizontalAlignment="Left" Margin="122,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="Add_User_Username" HorizontalAlignment="Left" Margin="122,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
         <TextBlock HorizontalAlignment="Left" Margin="60,70,0,0" TextWrapping="Wrap" Text="有效证件" VerticalAlignment="Top"/>
-        <TextBox Name="Add_User_IdCard"  HorizontalAlignment="Left" Margin="122,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="Add_User_IdCard"  HorizontalAlignment="Left" Margin="122,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
         <TextBlock HorizontalAlignment="Left" Margin="48,92,0,0" TextWrapping="Wrap" Text="登机牌编号" VerticalAlignment="Top"/>
-        <TextBox Name="Add_User_BoardCard"  HorizontalAlignment="Left" Margin="122,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="Add_User_BoardCard"  HorizontalAlignment="Left" Margin="122,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
         <TextBlock HorizontalAlignment="Left" Margin="72,114,0,0" TextWrapping="Wrap" Text="出发地" VerticalAlignment="Top"/>
-        <TextBox Name="Add_User_Departure"  HorizontalAlignment="Left" Margin="122,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="Add_User_Departure"  HorizontalAlignment="Left" Margin="122,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
         <TextBlock HorizontalAlignment="Left" Margin="72,136,0,0" TextWrapping="Wrap" Text="目的地" VerticalAlignment="Top"/>
-        <TextBox Name="Add_User_Destination"  HorizontalAlignment="Left" Margin="122,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="Add_User_Destination"  HorizontalAlignment="Left" Margin="122,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
         <TextBlock HorizontalAlignment="Left" Margin="60,158,0,0" TextWrapping="Wrap" Text="手机机型" VerticalAlignment="Top"/>
-        <TextBox Name="Add_User_PhoneType"  HorizontalAlignment="Left" Margin="122,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="Add_User_PhoneType"  HorizontalAlignment="Left" Margin="122,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
         <TextBlock HorizontalAlignment="Left" Margin="60,180,0,0" TextWrapping="Wrap" Text="手机号码" VerticalAlignment="Top"/>
-        <TextBox Name="Add_User_PhoneNumber"  HorizontalAlignment="Left" Margin="122,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="Add_User_PhoneNumber"  HorizontalAlignment="Left" Margin="122,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
         <TextBlock HorizontalAlignment="Left" Margin="36,201,0,0" TextWrapping="Wrap" Text="备用联系方式" VerticalAlignment="Top"/>
-        <TextBox Name="Add_User_BackupLink"  HorizontalAlignment="Left" Margin="122,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="保存" Click="Add_User_Save_Button_Click" HorizontalAlignment="Left" Margin="77,237,0,0" VerticalAlignment="Top" Width="50" Height="25"/>
-        <Button Content="取消" Click="Add_User_Exit_Button_Click" HorizontalAlignment="Left" Margin="172,237,0,0" VerticalAlignment="Top" Width="50" Height="25"/>
+        <TextBox Name="Add_User_BackupLink"  HorizontalAlignment="Left" Margin="122,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180"/>
+        <Button Content="保存" Click="Add_User_Save_Button_Click" HorizontalAlignment="Left" Margin="105,237,0,0" VerticalAlignment="Top" Width="50" Height="25"/>
+        <Button Content="取消" Click="Add_User_Exit_Button_Click" HorizontalAlignment="Left" Margin="200,237,0,0" VerticalAlignment="Top" Width="50" Height="25"/>
     </Grid>
 </Window>

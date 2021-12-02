@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MagicalBox"
         mc:Ignorable="d"
         Title="AdminPage" Height="627" Width="987">
-    <Grid Margin="0,0,10,-5">
+    <Grid Margin="0,0,0,0">
         <ListView x:Name="dataList"  ItemsSource="{Binding}" Margin="113,131,113,40" >
             <ListView.View>
                 <GridView>
@@ -24,8 +24,9 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="刷新列表" Name="refreshList" Click="refreshList_Click" HorizontalAlignment="Left" Margin="624,65,0,0" VerticalAlignment="Top"/>
-        <Button Content="添加信息" Name="addInfo" Click="addInfo_Click" HorizontalAlignment="Left" Margin="710,65,0,0" VerticalAlignment="Top"/>
-        <Button Content="删除信息" Name="deleteInfo" HorizontalAlignment="Left" Margin="792,65,0,0" VerticalAlignment="Top"/>
+        <Button Content="查看详情" Name="checkDetail" Click="checkDetail_Click" HorizontalAlignment="Left" Margin="546,65,0,0" VerticalAlignment="Top" Height="25" Width="65"/>
+        <Button Content="添加信息" Name="addInfo" Click="addInfo_Click" HorizontalAlignment="Left" Margin="628,65,0,0" VerticalAlignment="Top" Height="25" Width="65"/>
+        <Button Content="删除信息" Name="deleteInfo" Click="removeInfo_Click" HorizontalAlignment="Left" Margin="710,65,0,0" VerticalAlignment="Top" Height="25" Width="65"/>
+        <Button Content="刷新列表" Name="refreshList" Click="refreshList_Click" HorizontalAlignment="Left" Margin="792,65,0,0" VerticalAlignment="Top" Height="25" Width="65"/>
     </Grid>
 </Window>

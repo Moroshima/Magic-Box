@@ -1,4 +1,5 @@
 ﻿using MagicalBox.Database;
+using MagicalBox.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +45,41 @@ namespace MagicalBox
         private void addInfo_Click(object sender, RoutedEventArgs e)
         {
             new AddUserInfo().ShowDialog();
+            initList();
+        }
+
+        private void removeInfo_Click(object sender, RoutedEventArgs e)
+        {
+            using AppDbContext dbContext = new AppDbContext();
+            User Single_User = dataList.SelectedItem as User;
+            dbContext.Users.Remove(Single_User);
+            //dataList.Items.Remove(Single_User);
+            dbContext.SaveChanges();
+            initList();
+        }
+
+        private void checkDetail_Click(object sender, RoutedEventArgs e)
+        {
+            //MessageBox.Show(dataList.SelectedItem.GetType().ToString());
+            User Single_User = dataList.SelectedItem as User;
+            if (Single_User != null && Single_User is User)
+            {
+                MessageBox.Show(
+                    "盒子编号" + Single_User.BoxId + "\n\n" +
+                    "姓名：" + Single_User.Username + "\n\n" +
+                    "有效证件：" + Single_User.IdCard + "\n\n" +
+                    "登机牌号：" + Single_User.BoardCard + "\n\n" +
+                    "出发地：" + Single_User.Departure + "\n\n" +
+                    "目的地：" + Single_User.Destination + "\n\n" +
+                    "手机机型" + Single_User.PhoneType + "\n\n" +
+                    "手机号码" + Single_User.PhoneNumber + "\n\n" +
+                    "备用联系方式" + Single_User.BackupLink + "\n\n" +
+                    "是否已取回手机" + Single_User.Returned + "\n\n" +
+                    "满意度" + Single_User.Satisfaction + "\n\n" +
+                    "评价" + Single_User.Comment + "\n\n"
+                    );
+            }
+            else MessageBox.Show("请先选定需要查看的乘客！");
         }
     }
 }
