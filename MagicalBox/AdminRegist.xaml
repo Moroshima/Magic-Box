@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MagicalBox"
         mc:Ignorable="d"
-        Title="AdminRegist" Height="200" Width="400">
+        Title="AdminRegist" Height="250" Width="400">
     <Grid>
-        <TextBox Name="boxNumber" HorizontalAlignment="Left" Margin="160,37,0,0" VerticalAlignment="Top" Width="160"/>
-        <TextBox Name="idCardNumber" HorizontalAlignment="Left" Margin="160,70,0,0" VerticalAlignment="Top" Width="160"/>
-        <Label Content="盒子编号" HorizontalAlignment="Left" Margin="66,36,0,0" VerticalAlignment="Top"/>
-        <Label Content="身份证号" HorizontalAlignment="Left" Margin="66,66,0,0" VerticalAlignment="Top"/>
-        <Button Content="登录" Click="User_Button_Click" HorizontalAlignment="Left" Margin="95,107,0,0" VerticalAlignment="Top" Height="23" Width="79"/>
-        <Button Content="管理员登录" Click="Admin_Button_Click" HorizontalAlignment="Left" Margin="230,107,0,0" VerticalAlignment="Top" Height="23" Width="79"/>
+        <TextBox Name="adminNameToReg" HorizontalAlignment="Left" Margin="160,37,0,0" VerticalAlignment="Top" Width="160"/>
+        <TextBox Name="adminPasswordToReg" HorizontalAlignment="Left" Margin="160,70,0,0" VerticalAlignment="Top" Width="160"/>
+        <Label Content="用户名" HorizontalAlignment="Left" Margin="66,33,0,0" VerticalAlignment="Top"/>
+        <Label Content="密码" HorizontalAlignment="Left" Margin="66,66,0,0" VerticalAlignment="Top"/>
+        <Button Content="注册" Click="Admin_Reg_Button_Click" HorizontalAlignment="Left" Margin="89,151,0,0" VerticalAlignment="Top" Height="24" Width="79"/>
+        <Button Content="返回" Click="Admin_Reg_Back_Button_Click" HorizontalAlignment="Left" Margin="227,152,0,0" VerticalAlignment="Top" Height="23" Width="79"/>
+        <Label Content="注册口令" HorizontalAlignment="Left" Margin="66,97,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="adminRegPin" HorizontalAlignment="Left" Margin="160,101,0,0" VerticalAlignment="Top" Width="160"/>
     </Grid>
 </Window>

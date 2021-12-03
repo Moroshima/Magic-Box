@@ -24,10 +24,10 @@ namespace MagicalBox
         public AdminPage()
         {
             InitializeComponent();
-            initList();
+            InitList();
         }
 
-        private void initList()
+        public void InitList()
         {
             dataList.Items.Clear();
             using AppDbContext dbContext = new AppDbContext();
@@ -40,12 +40,12 @@ namespace MagicalBox
         }
         private void refreshList_Click(object sender, RoutedEventArgs e)
         {
-            initList();
+            InitList();
         }
         private void addInfo_Click(object sender, RoutedEventArgs e)
         {
             new AddUserInfo().ShowDialog();
-            initList();
+            InitList();
         }
 
         private void removeInfo_Click(object sender, RoutedEventArgs e)
@@ -57,10 +57,12 @@ namespace MagicalBox
                 dbContext.Users.Remove(Single_User);
                 //dataList.Items.Remove(Single_User);
                 dbContext.SaveChanges();
-                initList();
+                InitList();
             }
             else MessageBox.Show("请先选定需要删除信息的乘客！");
         }
+
+        public static string BoxId_String_To_Search;
 
         private void checkDetail_Click(object sender, RoutedEventArgs e)
         {
@@ -95,20 +97,13 @@ namespace MagicalBox
             }
             dbContext.SaveChanges();
             MessageBox.Show("设备归还成功！");
-            initList();
+            InitList();
         }
 
         private void easySearch_Click(object sender, RoutedEventArgs e)
         {
-            //for (int i = 0; i < dataList.Items.Count; i++)
-            //{
-            //    if (dataList.Items[i].BoxId.Text.ToString() == sOrderNo)
-            //    {
-            //        this.dataList.Items[i].Selected = true;//选中行
-            //        this.dataList.EnsureVisible(i);//滚动到指定的行位置
-            //        return;
-            //    }
-            //}
+            BoxId_String_To_Search = BoxId_To_Search.Text;
+            new AdminFastSearch().Show();
         }
     }
 }
