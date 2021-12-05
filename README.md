@@ -113,3 +113,13 @@ dotnet ef database update
 ### 管理端
 
 管理端可以通过注册功能新建账号，注册账号时需要提供注册口令以及之后会用于登录的用户名及密码。在登录后管理员能够对用户信息进行管理，包括但不限于添加删除乘客信息。同时管理员也能使用盒子编号快捷搜索乘客信息，并设置乘客盒子归还状态或删除该条乘客信息。
+
+
+
+## 参考文档
+
+[Windows Presentation Foundation - WPF .NET Framework | Microsoft Docs](https://docs.microsoft.com/zh-cn/dotnet/desktop/wpf/?view=netframeworkdesktop-4.8)
+
+[NuGet Gallery | dotnet-ef 6.0.0](https://www.nuget.org/packages/dotnet-ef/)
+
+[Entity Framework Core - EF Core | Microsoft Docs](https://docs.microsoft.com/zh-cn/ef/core/)
