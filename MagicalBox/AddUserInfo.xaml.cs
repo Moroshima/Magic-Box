@@ -43,7 +43,8 @@ namespace MagicalBox
                         if (Add_User_IdCard.Text.Length == 18
                         && int.TryParse(Add_User_IdCard.Text.Substring(0, 6), out int TryOutput1)
                         && int.TryParse(Add_User_IdCard.Text.Substring(6, 6), out int TryOutput2)
-                        && int.TryParse(Add_User_IdCard.Text.Substring(12, 6), out int TryOutput3))
+                        && int.TryParse(Add_User_IdCard.Text.Substring(12, 5), out int TryOutput3)
+                        && (int.TryParse(Add_User_IdCard.Text.Substring(17, 1), out int TryOutput4) || Add_User_IdCard.Text.Substring(17, 1)=="X" || Add_User_IdCard.Text.Substring(17, 1) == "x"))
                         {
                             string IdCard_Text = Add_User_IdCard.Text;
                             int Birth_Year_Number = int.Parse(IdCard_Text.Substring(6, 4));

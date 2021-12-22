@@ -21,6 +21,7 @@
                     <GridViewColumn Header="手机号码" DisplayMemberBinding="{Binding PhoneNumber}"/>
                     <GridViewColumn Header="备用联系方式" DisplayMemberBinding="{Binding BackupLink}"/>
                     <GridViewColumn Header="满意度" DisplayMemberBinding="{Binding Satisfaction}"/>
+                    <GridViewColumn Header="评价" DisplayMemberBinding="{Binding Comment}"/>
                 </GridView>
             </ListView.View>
         </ListView>
@@ -30,6 +31,6 @@
         <Button Content="添加信息" Name="addInfo" Click="addInfo_Click" HorizontalAlignment="Left" Margin="728,29,0,0" VerticalAlignment="Top" Height="27" Width="65"/>
         <Button Content="删除信息" Name="deleteInfo" Click="removeInfo_Click" HorizontalAlignment="Left" Margin="810,29,0,0" VerticalAlignment="Top" Height="27" Width="65"/>
         <Button Content="刷新列表" Name="refreshList" Click="refreshList_Click" HorizontalAlignment="Left" Margin="892,29,0,0" VerticalAlignment="Top" Height="27" Width="65"/>
-        <TextBox Name="BoxId_To_Search" FontSize="19" HorizontalAlignment="Left" Margin="39,29,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="197" Height="27"/>
+        <TextBox Name="BoxId_To_Search" FontSize="19" Text=""  HorizontalAlignment="Left" Margin="39,29,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="197" Height="27"/>
     </Grid>
 </Window>

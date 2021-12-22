@@ -32,7 +32,8 @@ namespace MagicalBox
             string box = boxNumber.Text;    //获取盒子编号
             string boxNumberFromDb = null;
             using AppDbContext dbContext = new AppDbContext();
-            if (idCard != null && box != null)
+            if (idCard != "" && box != "")
+            {
                 foreach (var item in dbContext.Users.Where(m => m.IdCard == $"{idCard}"))
                 {
                     boxNumberFromDb = item.BoxId.ToString();
@@ -40,19 +41,20 @@ namespace MagicalBox
                     Global_User_IdCard_Number = item.IdCard;
                     //MessageBox.Show(item.Password);
                 }
-            else MessageBox.Show("请完整填写账号与密码！");
-            // 判断用户名密码是否正确
-            if ((boxNumberFromDb != null) && boxNumberFromDb.Equals(box))
-            {
-                MessageBox.Show("登录成功！");
-                new UserJudgePage().Show();
-                Window window = Window.GetWindow(this);//关闭父窗体
-                window.Close();
+                // 判断用户名密码是否正确
+                if ((boxNumberFromDb != null) && boxNumberFromDb.Equals(box))
+                {
+                    MessageBox.Show("登录成功！");
+                    new UserJudgePage().Show();
+                    Window window = Window.GetWindow(this);//关闭父窗体
+                    window.Close();
+                }
+                else
+                {
+                    MessageBox.Show("登录失败！");
+                }
             }
-            else
-            {
-                MessageBox.Show("登录失败！");
-            }
+            else MessageBox.Show("请完整填写账号与密码！");         
         }
 
         private void Admin_Button_Click(object sender, RoutedEventArgs e)

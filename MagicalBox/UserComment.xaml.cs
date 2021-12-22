@@ -27,7 +27,7 @@ namespace MagicalBox
 
         private void User_Yes_To_Comment(object sender, RoutedEventArgs e)
         {
-            if (Feedback_Box.Text != null)
+            if (Feedback_Box.Text != "")
             {
                 using AppDbContext dbContext = new AppDbContext();
                 foreach (var item in dbContext.Users.Where(e => e.IdCard == UserLogin.Global_User_IdCard_Number))

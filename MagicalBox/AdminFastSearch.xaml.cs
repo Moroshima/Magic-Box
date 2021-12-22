@@ -28,19 +28,19 @@ namespace MagicalBox
         }
         private void SetData()
         {
-            bool BoxId_To_Search_Exist = false;
+            //bool BoxId_To_Search_Exist = false;
             using AppDbContext dbContext = new AppDbContext();
-            foreach (var item in dbContext.Users.Where(e => e.BoxId.ToString() == AdminPage.BoxId_String_To_Search))
-            {
-                BoxId_To_Search_Exist = true;
-            }
-            if (BoxId_To_Search_Exist)
-            {
+            //foreach (var item in dbContext.Users.Where(e => e.BoxId.ToString() == AdminPage.BoxId_String_To_Search))
+            //{
+            //    BoxId_To_Search_Exist = true;
+            //}
+            //if (BoxId_To_Search_Exist)
+            //{
                 foreach (var item in dbContext.Users.Where(e => e.BoxId.ToString() == AdminPage.BoxId_String_To_Search))
                 {
                     User Single_User = item;
                     User_Info_Text.Text =
-                    "盒子编号" + Single_User.BoxId + "\n\n" +
+                    "盒子编号：" + Single_User.BoxId + "\n\n" +
                     "姓名：" + Single_User.Username + "\n\n" +
                     "有效证件：" + Single_User.IdCard + "\n\n" +
                     "登机牌号：" + Single_User.BoardCard + "\n\n" +
@@ -53,13 +53,13 @@ namespace MagicalBox
                     "满意度：" + Single_User.Satisfaction + "\n\n" +
                     "评价：" + Single_User.Comment + "\n\n";
                 }
-            }
-            else
-            {
-                MessageBox.Show("查无此盒！");
-                Window window = Window.GetWindow(this);//关闭父窗体
-                window.Close();
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("查无此盒！");
+            //    Window window = Window.GetWindow(this);//关闭父窗体
+            //    window.Close();
+            //}
         }
         private void Get_Back_Button_Click(object sender, RoutedEventArgs e)
         {
@@ -69,8 +69,8 @@ namespace MagicalBox
                 item.Returned = true;
             }
             dbContext.SaveChanges();
-            MessageBox.Show("设置成功！");
             SetData();
+            MessageBox.Show("设置成功！");
         }
 
         private void Delete_Button_Click(object sender, RoutedEventArgs e)
@@ -83,7 +83,7 @@ namespace MagicalBox
             }
             dbContext.SaveChanges();
             MessageBox.Show("移除成功！");
-            Window window = Window.GetWindow(this);//关闭父窗体
+            Window window = Window.GetWindow(this);    //关闭父窗体
             window.Close();
         }
     }

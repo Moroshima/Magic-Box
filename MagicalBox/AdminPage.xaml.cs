@@ -90,20 +90,40 @@ namespace MagicalBox
         private void phoneReturned_Click(object sender, RoutedEventArgs e)
         {
             User Single_User = dataList.SelectedItem as User;
-            using AppDbContext dbContext = new AppDbContext();
-            foreach (var item in dbContext.Users.Where(e => e.Id == Single_User.Id))
+            if (Single_User != null && Single_User is User)
             {
-                item.Returned = true;
+                using AppDbContext dbContext = new AppDbContext();
+                foreach (var item in dbContext.Users.Where(e => e.Id == Single_User.Id))
+                {
+                    item.Returned = true;
+                }
+                dbContext.SaveChanges();
+                MessageBox.Show("设备归还成功！");
+                InitList();
             }
-            dbContext.SaveChanges();
-            MessageBox.Show("设备归还成功！");
-            InitList();
+            else MessageBox.Show("请先选定对应的乘客！");
         }
 
         private void easySearch_Click(object sender, RoutedEventArgs e)
         {
             BoxId_String_To_Search = BoxId_To_Search.Text;
-            new AdminFastSearch().Show();
+            if (BoxId_String_To_Search != "")
+            {
+                // MessageBox.Show(BoxId_String_To_Search);
+                bool BoxId_To_Search_Exist = false;
+                using AppDbContext dbContext = new AppDbContext();
+                foreach (var item in dbContext.Users.Where(e => e.BoxId.ToString() == AdminPage.BoxId_String_To_Search))
+                {
+                    BoxId_To_Search_Exist = true;
+                }
+                if (BoxId_To_Search_Exist)
+                {
+                    new AdminFastSearch().ShowDialog();
+                    InitList();
+                }
+                else MessageBox.Show("查无此盒！");
+            }
+            else MessageBox.Show("请先填写需要搜寻的盒子编号！");
         }
     }
 }

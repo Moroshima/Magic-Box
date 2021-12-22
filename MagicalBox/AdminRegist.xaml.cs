@@ -28,28 +28,32 @@ namespace MagicalBox
 
         private void Admin_Reg_Button_Click(object sender, RoutedEventArgs e)
         {
-            bool Admin_Already_Exist = false;
-            using AppDbContext dbContext = new AppDbContext();
-            foreach (var item in dbContext.Admins.Where(e => e.Username == adminNameToReg.Text))
+            if (adminNameToReg.Text != "" && adminPasswordToReg.Text != "" && adminRegPin.Text != "")
             {
-                Admin_Already_Exist = true;
-            }
-            if (Admin_Already_Exist) MessageBox.Show("该管理员名称已存在！");
-            else if (adminRegPin.Text != "0000") MessageBox.Show("注册口令错误，请从系统管理员处获取！");
-            else
-            {
-                var data = new Admin
+                bool Admin_Already_Exist = false;
+                using AppDbContext dbContext = new AppDbContext();
+                foreach (var item in dbContext.Admins.Where(e => e.Username == adminNameToReg.Text))
                 {
-                    Username = adminNameToReg.Text,
-                    Password = adminPasswordToReg.Text,
-                };
-                dbContext.Admins.Add(data);
-                dbContext.SaveChanges();
-                MessageBox.Show("注册成功，接下来会跳转登陆页面！");
-                new AdminLogin().Show();
-                Window window = Window.GetWindow(this);//关闭父窗体
-                window.Close();
+                    Admin_Already_Exist = true;
+                }
+                if (Admin_Already_Exist) MessageBox.Show("该管理员名称已存在！");
+                else if (adminRegPin.Text != "0000") MessageBox.Show("注册口令错误，请从系统管理员处获取！");
+                else
+                {
+                    var data = new Admin
+                    {
+                        Username = adminNameToReg.Text,
+                        Password = adminPasswordToReg.Text,
+                    };
+                    dbContext.Admins.Add(data);
+                    dbContext.SaveChanges();
+                    MessageBox.Show("注册成功，接下来会跳转登陆页面！");
+                    new AdminLogin().Show();
+                    Window window = Window.GetWindow(this);//关闭父窗体
+                    window.Close();
+                }
             }
+            else MessageBox.Show("请完整填写账号、密码与口令！");
         }
         private void Admin_Reg_Back_Button_Click(object sender, RoutedEventArgs e)
         {
