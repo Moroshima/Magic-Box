@@ -1,5 +1,6 @@
 ﻿using MagicalBox.Database;
 using MagicalBox.Model;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,8 @@ namespace MagicalBox
             //};
             //dbContext.Admins.Add(data);
             //dbContext.SaveChanges();
+            using AppDbContext context = new AppDbContext();
+            context.Database.EnsureCreated();
         }
 
         public static string Global_User_Phone_Number;
